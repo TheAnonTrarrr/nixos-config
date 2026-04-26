@@ -34,6 +34,26 @@
     };
   };
 
+  home.file.".config/i3/scripts/powermenu.sh" = {
+    executable = true;
+    text = ''
+      #!/bin/bash
+      DMENU="${pkgs.dmenu}/bin/dmenu"
+      I3MSG="${pkgs.i3}/bin/i3-msg"
+      TERMINAL="${pkgs.kitty}/bin/kitty" # Swapped to Kitty
+
+      options="Logout\nRebuild\nReboot\nShutdown"
+      chosen=$(echo -e "$options" | $DMENU -p "Action:")
+
+      case "$chosen" in
+        Logout) $I3MSG exit ;;
+        Rebuild) $TERMINAL -e bash -c "sudo nixos-rebuild switch --flake ./nixos-config#nixos; read -p 'Rebuild Complete. Press Enter to close...'" ;;
+        Reboot) systemctl reboot ;;
+        Shutdown) systemctl poweroff ;;
+      esac
+    '';
+  };
+
   # // User Packages //
   home.packages = [
 

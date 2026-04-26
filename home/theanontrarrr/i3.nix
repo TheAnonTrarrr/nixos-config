@@ -8,9 +8,11 @@
         modifier = "Mod4";
       in pkgs.lib.mkOptionDefault {
 
-        "${modifier}+Shift+p" = "exec ~/nixos-config/home/theanontrarrr/scripts/powermenu.sh";
+        "${modifier}+Shift+p" = "exec ~/.config/i3/scripts/powermenu.sh";
         
         "${modifier}+Return" = "exec ${pkgs.kitty}/bin/kitty";
+ 
+        "${modifier}+l" = "exec ${pkgs.i3lock}/bin/i3lock -c 000000";
       };
 
       gaps = {
