@@ -20,7 +20,7 @@
     };
 
     flake-parts.url = "github:hercules-ci/flake-parts";
-    inputs.niri.url = "github:YaLTeR/niri";
+    niri.url = "github:YaLTeR/niri";
   };
 
   outputs = inputs@{ flake-parts, nixpkgs, home-manager, ... }:

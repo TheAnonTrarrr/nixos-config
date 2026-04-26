@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    nerdfonts
+    nerd-fonts.fira-code
+    nerd-fonts.droid-sans-mono
     fira-code
     noto-fonts
     noto-fonts-emoji
