@@ -10,7 +10,6 @@
     niri
     xwayland
     wayland-utils
-    dmenu-wl
   ];
 
   programs.niri = {

@@ -46,7 +46,7 @@
     pkgs.pcmanfm
     pkgs.xrandr
     pkgs.pavucontrol
-
+    pkgs.dmenu-wl
   ];
 
   home.shellAliases = {
