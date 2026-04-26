@@ -8,7 +8,7 @@
         modifier = "Mod4";
       in pkgs.lib.mkOptionDefault {
 
-        "${modifier}+Shift+p" = "exec \"echo -e 'Logout\\nRebuild\\nReboot\\nShutdown' | dmenu -p 'Action:' | xargs -I{} bash -c 'if [ \\\"{}\\\" == \\\"Logout\\\" ]; then i3-msg exit; elif [ \\\"{}\\\" == \\\"Rebuild\\\" ]; then sudo nixos-rebuild switch --flake .#nixos; elif [ \\\"{}\\\" == \\\"Reboot\\\" ]; then reboot; elif [ \\\"{}\\\" == \\\"Shutdown\\\" ]; then poweroff; fi'\"";
+        "${modifier}+Shift+p" = "exec ./home/theanontrarrr/scripts/powermenu.sh";
         
         "${modifier}+Return" = "exec ${pkgs.kitty}/bin/kitty";
       };
@@ -31,7 +31,7 @@
 
       startup = [
         { command = "picom -b"; notification = false; }
-        { command = "feh --bg-fill ~/nixos-config/wallpapers/wallpaper_1.png"; notification = false; }
+        { command = "feh --bg-fill ./wallpapers/wallpaper_1.png"; notification = false; }
       ];
     };
   };
