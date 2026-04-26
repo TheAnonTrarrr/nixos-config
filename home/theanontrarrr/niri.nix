@@ -36,7 +36,7 @@
         gaps = 10;
         border.width = 2;
         focus-ring.enable = true;
-        center-focused-column = true;
+        center-focused-column = "on-overflow";
       };
     };
   };
