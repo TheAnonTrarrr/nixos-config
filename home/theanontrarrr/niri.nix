@@ -10,12 +10,13 @@
     niri
     xwayland
     wayland-utils
+    fuzzel
   ];
 
   programs.niri = {
     settings = {
       spawn-at-startup = [
-        { command = [ "noctalia-shell" ]; }
+        { command = [ "${pkgs.noctalia-shell}/bin/noctalia-shell" ]; }
       ];
 
       outputs."HDMI-A-1" = {
