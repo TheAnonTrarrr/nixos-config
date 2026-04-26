@@ -25,7 +25,7 @@
 
       binds = with config.lib.niri.actions; {
         "Mod+Return".action = spawn "${pkgs.kitty}/bin/kitty";
-        "Mod+D".action = spawn "dmenu-wl";
+        "Mod+D".action = spawn "fuzzel";
         "Mod+Q".action = close-window;
         "Mod+Shift+E".action = quit;
       
