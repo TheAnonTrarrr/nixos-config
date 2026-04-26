@@ -20,7 +20,7 @@
     };
 
     flake-parts.url = "github:hercules-ci/flake-parts";
-    niri.url = "github:YaLTeR/niri";
+    niri.url = "github:sodiboo/niri-flake";
 
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
