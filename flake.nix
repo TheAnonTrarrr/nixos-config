@@ -39,6 +39,11 @@
                 useUserPackages =  true;
                 users.theanontrarrr = import ./home/theanontrarrr/default.nix;
                 backupFileExtension = "backup";
+                lib.homeManagerConfiguration {
+                  pkgs = nixpkgs.legacyPackages.x86_64-linux;
+                  extraSpecialArgs = { inherit inputs; };
+                  modules = [ ./home/theanontrarrr/default.nix ];
+                };
               };
             }
           ];
