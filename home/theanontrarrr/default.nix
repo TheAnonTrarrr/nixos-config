@@ -13,6 +13,7 @@
   imports = [
     ./fonts.nix
     ./i3.nix
+    ./niri.nix
   ];
 
   # // Basic Configuration //
