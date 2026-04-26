@@ -22,7 +22,7 @@
 
       startup = [
         { command = "picom -b"; notification = false; }
-        { command = "feh --bg-fill ~/nixos-config/wallpaper_1.png"; notification = false; }
+        { command = "feh --bg-fill ~/nixos-config/wallpapers/wallpaper_1.png"; notification = false; }
       ];
     };
   };
