@@ -49,11 +49,6 @@
     pkgs.pavucontrol
   ];
 
-  home.shellAliases = {
-    nix-switch = "sudo nixos-rebuild switch --flake ~/nixos-config#nixos";
-    nix-push = "git -C ~/nixos-config add . && git -C ~/nixos-config commit -m 'update' && git -C ~/nixos-config push";
-  };
-
   services.flameshot.enable = true;
 
   home.file = {
