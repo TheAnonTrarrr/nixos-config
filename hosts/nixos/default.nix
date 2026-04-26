@@ -177,9 +177,6 @@
   ];
 
 
-  fonts.fontconfig.enable = true;
-
-
   # // NixOS Version (DO NOT CHANGE!) //
   system.stateVersion = "25.11";
 

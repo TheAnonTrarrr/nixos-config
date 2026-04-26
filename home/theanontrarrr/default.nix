@@ -10,6 +10,11 @@
 
 {
 
+  imports = [
+    ./fonts.nix
+    ./i3.nix
+  ];
+
   # // Basic Configuration //
   home.username = "theanontrarrr";
   home.homeDirectory = "/home/theanontrarrr";
