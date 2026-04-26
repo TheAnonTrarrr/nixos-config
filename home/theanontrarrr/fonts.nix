@@ -4,7 +4,7 @@
     nerd-fonts.droid-sans-mono
     fira-code
     noto-fonts
-    noto-fonts-emoji
+    noto-fonts-color-emoji
   ];
 
   # This enables font discovery for applications
