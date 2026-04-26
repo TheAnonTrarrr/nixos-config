@@ -1,3 +1,5 @@
 Zapret params:
 
 --filter-tcp=443 --dpi-desync=fake --dpi-desync-autottl=2 --dpi-desync-fooling=md5sig --dpi-desync-fake-tls-mod=rnd,dupsid,rndsni,padencap --filter-udp=443 --dpi-desync=fake --dpi-desync-repeats=6 --dpi-desync-fake-quic
+
+bug
