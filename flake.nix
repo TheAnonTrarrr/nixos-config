@@ -21,6 +21,11 @@
 
     flake-parts.url = "github:hercules-ci/flake-parts";
     niri.url = "github:YaLTeR/niri";
+
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ flake-parts, nixpkgs, home-manager, ... }:
