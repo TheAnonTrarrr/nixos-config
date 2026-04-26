@@ -8,7 +8,7 @@
         modifier = "Mod4";
       in pkgs.lib.mkOptionDefault {
 
-        "${modifier}+Shift+p" = "exec ./home/theanontrarrr/scripts/powermenu.sh";
+        "${modifier}+Shift+p" = "exec ./scripts/powermenu.sh";
         
         "${modifier}+Return" = "exec ${pkgs.kitty}/bin/kitty";
       };
