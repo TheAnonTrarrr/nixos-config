@@ -4,6 +4,15 @@
     config = {
       modifier = "Mod4";
       
+      keybindings = let
+        modifier = "Mod4";
+      in pkgs.lib.mkOptionDefault {
+
+        "${modifier}+Shift+p" = "exec \"echo -e 'Logout\\nRebuild\\nReboot\\nShutdown' | dmenu -p 'Action:' | xargs -I{} bash -c 'if [ \\\"{}\\\" == \\\"Logout\\\" ]; then i3-msg exit; elif [ \\\"{}\\\" == \\\"Rebuild\\\" ]; then sudo nixos-rebuild switch --flake .#nixos; elif [ \\\"{}\\\" == \\\"Reboot\\\" ]; then reboot; elif [ \\\"{}\\\" == \\\"Shutdown\\\" ]; then poweroff; fi'\"";
+        
+        "${modifier}+Return" = "exec ${pkgs.kitty}/bin/kitty";
+      };
+
       gaps = {
         inner = 10;
         outer = 5;
