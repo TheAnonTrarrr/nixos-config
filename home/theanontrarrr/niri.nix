@@ -16,7 +16,9 @@
   programs.niri = {
     settings = {
       spawn-at-startup = [
-        { command = [ "${pkgs.noctalia-shell}/bin/noctalia-shell" ]; }
+        { command = [ "dbus-update-activation-environment" "--systemd" "DISPLAY" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP" "NIXOS_OZONE_WL" ]; }
+  
+        { command = [ "noctalia-shell" ]; }
       ];
 
       outputs."HDMI-A-1" = {

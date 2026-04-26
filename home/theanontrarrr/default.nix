@@ -49,132 +49,15 @@
     pkgs.pavucontrol
   ];
 
+  home.sessionVariables = {
+    XDG_CURRENT_DESKTOP = "niri";
+    XDG_SESSION_DESKTOP = "niri";
+    XDG_SESSION_TYPE = "wayland";
+    NIXOS_OZONE_WL = "1"; 
+  };
+
   services.flameshot.enable = true;
-
-  home.file = {
-    ".config/openbox/autostart".text = ''
-      picom --backend glx --use-damage &
-      tint2 &
-      feh --bg-fill ~/Pictures/wallpaper_1.png &
-      copyq &
-    '';
-  }; 
   
-  xdg.configFile."openbox/rc.xml".text = ''
-  <?xml version="1.0" encoding="UTF-8"?>
-  <openbox_config xmlns="http://openbox.org/3.4/rc">
-    <focus>
-      <focusNew>yes</focusNew>
-      <followMouse>no</followMouse>
-      <focusLast>yes</focusLast>
-      <underMouse>no</underMouse>
-    </focus>
-
-    <keyboard>
-      <chainQuitKey>C-g</chainQuitKey>
-
-      <keybind key="A-Return">
-        <action name="Execute"><command>kitty</command></action>
-      </keybind>
-
-      <keybind key="A-d">
-        <action name="Execute"><command>rofi -show drun</command></action>
-      </keybind>
-
-      <keybind key="A-q">
-        <action name="Close"/>
-      </keybind>
-    
-      <keybind key="W-Left"><action name="UnmaximizeFull"/><action name="MoveResizeTo"><x>0</x><y>0</y><width>50%</width><height>100%</height></action></keybind>
-      <keybind key="W-Right"><action name="UnmaximizeFull"/><action name="MoveResizeTo"><x>50%</x><y>0</y><width>50%</width><height>100%</height></action></keybind>
-
-      <keybind key="Print">
-        <action name="Execute">
-          <command>flameshot gui</command>
-        </action>
-      </keybind>
-    </keyboard>
-
-    <mouse>
-      <context name="Client">
-        <mousebind button="Left" action="Press">
-          <action name="Focus"/>
-          <action name="Raise"/>
-        </mousebind>
-      </context>
-
-      <context name="Titlebar">
-        <mousebind button="Left" action="Press">
-          <action name="Focus"/>
-          <action name="Raise"/>
-        </mousebind>
-        <mousebind button="Left" action="Drag">
-          <action name="Move"/>
-        </mousebind>
-      </context>
-
-      <context name="Root">
-        <mousebind button="Right" action="Press">
-          <action name="ShowMenu">
-            <menu>root-menu</menu>
-          </action>
-        </mousebind>
-      </context>
-
-      <context>
-        <mousebind button="A-Left" action="Press">
-          <action name="Focus"/>
-          <action name="Raise"/>
-        </mousebind>
-        <mousebind button="A-Left" action="Drag">
-          <action name="Move"/>
-        </mousebind>
-        <mousebind button="A-Right" action="Press">
-          <action name="Focus"/>
-          <action name="Raise"/>
-          <action name="Unshade"/>
-        </mousebind>
-        <mousebind button="A-Right" action="Drag">
-          <action name="Resize"/>
-        </mousebind>
-      </context>
-    </mouse>
-
-    <menu>
-      <file>menu.xml</file>
-    </menu>
-
-    <resize>
-      <drawContent>yes</drawContent>
-      <popupShow>Never</popupShow>
-    </resize>
-
-    <theme>
-      <name>Clearlooks</name>
-      <cornerRadius>4</cornerRadius>
-    </theme>
-  </openbox_config>
-  '';
-
-  xdg.configFile."openbox/menu.xml".text = ''
-  <?xml version="1.0" encoding="UTF-8"?>
-  <openbox_menu xmlns="http://openbox.org/3.4/menu">
-    <menu id="root-menu" label="Openbox 3">
-      <item label="Kitty Terminal"><action name="Execute"><command>kitty</command></action></item>
-      <item label="Web Browser"><action name="Execute"><command>firefox</command></action></item>
-      <separator />
-      <item label="Tint2 Settings"><action name="Execute"><command>tint2conf</command></action></item>
-      <item label="Reconfigure Openbox"><action name="Reconfigure" /></item>
-      <separator />
-      <item label="Suspend NixOS"><action name="Execute"><command>systemctl suspend</command></action></item>
-      <item label="Restart NixOS"><action name="Execute"><command>systemctl reboot</command></action></item>
-      <item label="Shutdown NixOS"><action name="Execute"><command>systemctl shutdown</command></action></item>
-      <separator />
-      <item label="Exit OpenBox"><action name="Exit" /></item>
-    </menu>
-  </openbox_menu>
-  '';
-
   xdg.configFile."kitty/kitty.conf".text = ''
   background #000000
   foreground #ebdbb2
