@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }: 
 
 let
   powermenu = pkgs.writeShellScriptBin "powermenu" ''
@@ -17,6 +17,7 @@ let
     esac
   '';
 in
+{
 
   home.packages = [ powermenu ];
 
