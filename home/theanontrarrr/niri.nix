@@ -3,7 +3,7 @@
 {
 
   imports = [
-    inputs.niri.homeModules.niri
+    inputs.niri.homeManagerModules.niri
   ];
 
   home.packages = with pkgs; [
