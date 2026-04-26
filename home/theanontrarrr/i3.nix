@@ -8,7 +8,7 @@
         modifier = "Mod4";
       in pkgs.lib.mkOptionDefault {
 
-        "${modifier}+Shift+p" = "exec ./scripts/powermenu.sh";
+        "${modifier}+Shift+p" = "exec ~/nixos-config/home/theanontrarrr/scripts/powermenu.sh";
         
         "${modifier}+Return" = "exec ${pkgs.kitty}/bin/kitty";
       };
@@ -31,7 +31,7 @@
 
       startup = [
         { command = "picom -b"; notification = false; }
-        { command = "feh --bg-fill ./wallpapers/wallpaper_1.png"; notification = false; }
+        { command = "feh --bg-fill ~/nixos-config/wallpapers/wallpaper_1.png"; notification = false; }
       ];
     };
   };
