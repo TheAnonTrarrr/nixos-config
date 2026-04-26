@@ -1,6 +1,11 @@
-{ pkgs, config, ... }:
+{ pkgs, config, lib, inputs, ... }:
 
 {
+
+  imports = [
+    inputs.niri.homeModules.niri
+  ];
+
   home.packages = with pkgs; [
     niri
     xwayland
