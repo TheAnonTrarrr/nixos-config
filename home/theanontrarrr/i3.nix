@@ -1,4 +1,25 @@
 { pkgs, ... }: {
+
+let
+  powermenu = pkgs.writeShellScriptBin "powermenu" ''
+    DMENU="${pkgs.dmenu}/bin/dmenu"
+    I3MSG="${pkgs.i3}/bin/i3-msg"
+    TERMINAL="${pkgs.kitty}/bin/kitty"
+
+    options="Logout\nRebuild\nReboot\nShutdown"
+    chosen=$(echo -e "$options" | $DMENU -p "Action:")
+
+    case "$chosen" in
+      Logout) $I3MSG exit ;;
+      Rebuild) $TERMINAL -e bash -c "sudo nixos-rebuild switch --flake ./nixos-config#nixos; read -p 'Done!'" ;;
+      Reboot) systemctl reboot ;;
+      Shutdown) systemctl poweroff ;;
+    esac
+  '';
+in
+
+  home.packages = [ powermenu ];
+
   xsession.windowManager.i3 = {
     enable = true;
     config = {
@@ -8,7 +29,7 @@
         modifier = "Mod4";
       in pkgs.lib.mkOptionDefault {
 
-        "${modifier}+Shift+p" = "exec ~/.config/i3/scripts/powermenu.sh";
+        "${modifier}+Shift+p" = "exec powermenu";
         
         "${modifier}+Return" = "exec ${pkgs.kitty}/bin/kitty";
  
