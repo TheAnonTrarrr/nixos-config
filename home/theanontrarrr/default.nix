@@ -14,6 +14,7 @@
     ./fonts.nix
     ./i3.nix
     ./niri.nix
+    ./noctalia.nix
   ];
 
   # // Basic Configuration //
