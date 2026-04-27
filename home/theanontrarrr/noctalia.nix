@@ -7,7 +7,7 @@
 
   programs.noctalia-shell = {
     enable = true;
-    # package = inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default;
+    package = inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default;
     settings = {
       bar = {
         position = "top";
