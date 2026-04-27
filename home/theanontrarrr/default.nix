@@ -49,13 +49,6 @@
     pkgs.pavucontrol
   ];
 
-  home.sessionVariables = {
-    XDG_CURRENT_DESKTOP = "niri";
-    XDG_SESSION_DESKTOP = "niri";
-    XDG_SESSION_TYPE = "wayland";
-    NIXOS_OZONE_WL = "1"; 
-  };
-
   services.flameshot.enable = true;
   
   xdg.configFile."kitty/kitty.conf".text = ''

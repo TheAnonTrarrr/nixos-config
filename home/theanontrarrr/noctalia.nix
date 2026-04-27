@@ -5,10 +5,9 @@
     inputs.noctalia.homeModules.default
   ];
 
-  home.packages = [ inputs.noctalia.packages.${pkgs.system}.default ];
-
   programs.noctalia-shell = {
     enable = true;
+    # package = inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default;
     settings = {
       bar = {
         position = "top";
