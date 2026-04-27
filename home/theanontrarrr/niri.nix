@@ -16,7 +16,6 @@
   programs.niri = {
     settings = {
       spawn-at-startup = [
-        { command = [ "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP" ]; }
         { command = [ "noctalia-shell" ]; }
       ];
 
