@@ -47,6 +47,7 @@
     pkgs.xrandr
     pkgs.pavucontrol
     pkgs.yazi
+    pkgs.yazi-picker
     pkgs.thunar
   ];
 
