@@ -70,6 +70,7 @@
             bottom-right = 12.0;
           };
           clip-to-geometry = true;
+          tab-indicator = {};
         }
       ];
       
