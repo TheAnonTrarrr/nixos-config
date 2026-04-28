@@ -31,16 +31,19 @@
   fileSystems."/Windows" =
     { device = "/dev/disk/by-uuid/D84E24C44E249CEE";
       fsType = "ntfs3";
+      options = [ "uid=1000" "gid=100" "rw" "umask=000" "nofail" ]
     };
 
   fileSystems."/Files" =
     { device = "/dev/disk/by-uuid/506AD7406AD72210";
       fsType = "ntfs3";
+      options = [ "uid=1000" "gid=100" "rw" "umask=000" "nofail" ]
     };
 
   fileSystems."/Linux" =
     { device = "/dev/disk/by-uuid/8C6688B96688A614";
       fsType = "ntfs3";
+      options = [ "uid=1000" "gid=100" "rw" "umask=000" "nofail" ]
     };
 
   swapDevices = [ ];
