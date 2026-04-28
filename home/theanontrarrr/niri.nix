@@ -53,6 +53,7 @@
         focus-ring = {
           enable = true;
           width = 2;
+        };
         tab-indicator = {
           enable = true;
           length.total-proportion = 1.0;
