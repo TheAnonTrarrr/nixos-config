@@ -54,10 +54,10 @@
           enable = true;
           width = 2;
         tab-indicator = {
-          enable;
-          corner-radius 0;
-          position "left";
-          length total-proportion=1.0;
+          enable = true;
+          corner-radius = 0;
+          position = "left";
+          length.total-proportion = 1.0;
         };
       };
       
