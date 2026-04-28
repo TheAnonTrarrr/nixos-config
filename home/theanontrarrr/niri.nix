@@ -53,11 +53,11 @@
         focus-ring = {
           enable = true;
           width = 2;
-        tab-bar = {
-          enable = true;
-          corner-radius = 0;
-          position = "left";
-          length.total-proportion = 1.0;
+        tab-indicator = {
+          enable;
+          corner-radius 0;
+          position "left";
+          length total-proportion=1.0;
         };
       };
       
@@ -70,7 +70,6 @@
             bottom-right = 12.0;
           };
           clip-to-geometry = true;
-          tab-indicator = {};
         }
       ];
       
