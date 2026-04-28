@@ -39,6 +39,11 @@
       
         "Mod+Left".action = focus-column-left;
         "Mod+Right".action = focus-column-right;
+        "Mod+Up".action = focus-window-or-workspace-up;
+        "Mod+Down".action = focus-window-or-workspace-down;
+        "Mod+BracketLeft".action = consume-or-expel-window-left;
+        "Mod+BracketRight".action = consume-or-expel-window-right;
+        "Mod+W".action = toggle-column-tabbed-display; 
       };
 
       layout = {
@@ -48,6 +53,11 @@
         focus-ring = {
           enable = true;
           width = 2;
+        tab-bar = {
+          enable = true;
+          corner-radius = 0;
+          position = "left";
+          length.total-proportion = 1.0;
         };
       };
       

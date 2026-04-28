@@ -43,10 +43,11 @@
     pkgs.discord
     pkgs.qbittorrent
     pkgs.xclip
-    pkgs.copyq
-    pkgs.pcmanfm
+    pkgs.wl-clipboard
     pkgs.xrandr
     pkgs.pavucontrol
+    pkgs.yazi
+    pkgs.thunar
   ];
 
   services.flameshot.enable = true;
