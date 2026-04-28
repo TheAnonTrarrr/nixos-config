@@ -48,6 +48,7 @@
     pkgs.pavucontrol
     pkgs.yazi
     pkgs.thunar
+    pkgs.zenity
   ];
 
   services.flameshot.enable = true;
