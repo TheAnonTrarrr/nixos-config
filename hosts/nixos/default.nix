@@ -74,13 +74,9 @@
 
   };
 
-
-  xdg.portal = {
-    enable = true;
-    config.common.default = [ "gtk" ]; 
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.config.niri = {
+    "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ]; # or "kde"
   };
-
 
   # / Double Suspend fix /
   systemd.services.systemd-suspend = {

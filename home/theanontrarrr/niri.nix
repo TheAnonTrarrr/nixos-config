@@ -55,8 +55,6 @@
           width = 2;
         tab-indicator = {
           enable = true;
-          corner-radius = 0;
-          position = "left";
           length.total-proportion = 1.0;
         };
       };
