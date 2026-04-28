@@ -55,7 +55,7 @@
           width = 2;
         };
         tab-indicator = {
-          length.total.proportion = 1.0;
+          length.total-proportion = 1.0;
         };
       };
       
