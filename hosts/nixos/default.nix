@@ -75,6 +75,13 @@
   };
 
 
+  xdg.portal = {
+    enable = true;
+    config.common.default = [ "gtk" ]; 
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
+
+
   # / Double Suspend fix /
   systemd.services.systemd-suspend = {
     environment.SYSTEMD_SLEEP_FREEZE_USER_SESSIONS = "false";
