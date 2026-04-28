@@ -74,8 +74,15 @@
 
   };
 
-  xdg.portal.config.niri = {
-    "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ]; # or "kde"
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config = {
+      niri = {
+        default = [ "gtk" ];
+        "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
+      };
+    };
   };
 
   # / Double Suspend fix /
