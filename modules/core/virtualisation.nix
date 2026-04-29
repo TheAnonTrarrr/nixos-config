@@ -25,6 +25,7 @@
     "f /dev/shm/looking-glass 0660 theanontrarrr libvirtd -"
     "L+ /var/lib/qemu/firmware - - - - ${pkgs.qemu}/share/qemu/firmware"
     "d /etc/mdevctl.d 0755 root root -"
+    "d /etc/mdevctl/scripts.d/callouts 0755 root root -"
   ];
 
   boot.extraModprobeConfig = ''
