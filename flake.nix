@@ -30,7 +30,7 @@
     vgpu4nixos.url = "github:mrzenc/vgpu4nixos";
   };
 
-  outputs = inputs@{ flake-parts, nixpkgs, home-manager, vgpu4nixos, ... }@inputs:
+  outputs = inputs@{ flake-parts, nixpkgs, home-manager, vgpu4nixos, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" ];
       imports = [];
