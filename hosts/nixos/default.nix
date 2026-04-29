@@ -18,6 +18,7 @@
       ../../modules/core/network.nix
       ../../modules/core/nvidia.nix
       ../../modules/core/pipewire.nix
+      ../../modules/core/virtualisation.nix
     ];
 
 
@@ -119,7 +120,7 @@
   users.users.theanontrarrr = {
 
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "video" "input" ];
+    extraGroups = [ "wheel" "networkmanager" "video" "input" "libvrtd" "kvm" ];
     packages = with pkgs; [
       tree
     ];
@@ -149,6 +150,7 @@
 
     dconf.enable = true;
     niri.enable = true;
+    virt-manager.enable = true;
 
   };
 

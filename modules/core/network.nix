@@ -1,6 +1,6 @@
 { pkgs, ...}: {
   # // Network //
-  networking = {   # Configure network connections interactively with nmcli or nmtui.
+  networking = {
 
     hostName = "nixos";
     networkmanager.enable = true;
@@ -10,5 +10,10 @@
       ${builtins.readFile ./extrahosts}
     '';
 
-  };
+    firewall.trustedInterfaces = [ "virbr0" ];
+
+  };  
+
+  boot.kernelModules = [ "tun" "tap" ];
+
 }
