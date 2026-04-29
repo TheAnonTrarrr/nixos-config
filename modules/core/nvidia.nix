@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: {
   hardware.nvidia = {
     open = true;
     powerManagement.enable = true;
