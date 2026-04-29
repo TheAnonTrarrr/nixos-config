@@ -4,7 +4,7 @@
     powerManagement.enable = true;
     modesetting.enable = true;    
     powerManagement.finegrained = false;
-    package = config.boot.kernelPackages.nvidiaPackages.vgpu_17_3;
+    # package = config.boot.kernelPackages.nvidiaPackages.vgpu_17_3;
     vgpu = {
       patcher.enable = true;
     };
