@@ -6,6 +6,7 @@
     powerManagement.finegrained = false;
     vgpu = {
       patcher.enable = true;
+      package = config.boot.kernelPackages.nvidiaPackages.production;
     };
   };
   services.xserver = {
