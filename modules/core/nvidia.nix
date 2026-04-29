@@ -5,7 +5,6 @@
     modesetting.enable = true;    
     powerManagement.finegrained = false;
     vgpu = {
-      unlocker.enable = true;
       patcher.enable = true;
     };
   };
