@@ -1,6 +1,6 @@
 { pkgs, config, ... }: {
   hardware.nvidia = {
-    open = true;
+    open = false;
     powerManagement.enable = true;
     modesetting.enable = true;    
     powerManagement.finegrained = false;
