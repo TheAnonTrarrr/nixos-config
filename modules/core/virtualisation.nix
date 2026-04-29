@@ -33,7 +33,6 @@
   boot.kernelParams = [ 
     "intel_iommu=on" 
     "iommu=pt"
-    "vfio-pci.ids=10de:1f08,10de:10f9"
   ];
 
 
