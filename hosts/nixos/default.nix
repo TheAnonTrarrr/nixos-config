@@ -172,6 +172,8 @@
     rofi
     obconf
     lxappearance
+    mdevctl
+    pciutils
 
     (heroic.override {
       extraPkgs = pkgs: with pkgs; [
