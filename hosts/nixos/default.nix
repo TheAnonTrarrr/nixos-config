@@ -86,9 +86,9 @@
   };
 
   # / Double Suspend fix /
-  systemd.services.systemd-suspend = {
-    environment.SYSTEMD_SLEEP_FREEZE_USER_SESSIONS = "false";
-  };
+  # systemd.services.systemd-suspend = {
+  #   environment.SYSTEMD_SLEEP_FREEZE_USER_SESSIONS = "false";
+  # };
 
   
   i18n.defaultLocale = "en_US.UTF-8";

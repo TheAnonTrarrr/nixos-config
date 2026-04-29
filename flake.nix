@@ -26,9 +26,11 @@
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    vgpu4nixos.url = "github:mrzenc/vgpu4nixos";
   };
 
-  outputs = inputs@{ flake-parts, nixpkgs, home-manager, ... }:
+  outputs = inputs@{ flake-parts, nixpkgs, home-manager, vgpu4nixos, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" ];
       imports = [];
@@ -47,6 +49,7 @@
                 extraSpecialArgs = { inherit inputs; };
               };
             }
+            vgpu4nixos.nixosModules.host
           ];
         };
       };

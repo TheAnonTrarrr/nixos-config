@@ -3,6 +3,7 @@
     open = true;
     powerManagement.enable = true;
     modesetting.enable = true;    
+    powerManagement.finegrained = false;
   };
   services.xserver = {
     screenSection = ''
@@ -13,4 +14,8 @@
       Option "ModeValidation" "AllowNonEdidModes"
     '';
   };
+  boot.extraModprobeConfig = ''
+    options nvidia NVreg_PreserveVideoMemoryAllocations=1
+    options nvidia NVreg_TemporaryFilePath=/var/tmp
+  '';
 }
