@@ -120,7 +120,7 @@
   users.users.theanontrarrr = {
 
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "video" "input" "libvrtd" "kvm" ];
+    extraGroups = [ "wheel" "networkmanager" "video" "input" "libvirtd" "kvm" ];
     packages = with pkgs; [
       tree
     ];
