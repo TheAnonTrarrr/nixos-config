@@ -4,9 +4,9 @@
     powerManagement.enable = true;
     modesetting.enable = true;    
     powerManagement.finegrained = false;
+    package = config.boot.kernelPackages.nvidiaPackages.vgpu_17_3;
     vgpu = {
       patcher.enable = true;
-      package = config.boot.kernelPackages.nvidiaPackages.production;
     };
   };
   services.xserver = {
