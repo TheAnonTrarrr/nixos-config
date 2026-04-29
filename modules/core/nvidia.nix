@@ -4,6 +4,11 @@
     powerManagement.enable = true;
     modesetting.enable = true;    
     powerManagement.finegrained = false;
+    vgpu = {
+      enable = true;
+      unlocker.enable = true;
+      patcher.enable = true;
+    };
   };
   services.xserver = {
     screenSection = ''

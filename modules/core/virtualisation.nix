@@ -9,11 +9,6 @@
         swtpm.enable = true;
       };
     };
-    vgpu = {
-      enable = true;
-      patcher.enable = true;
-      unlocker.enable = true;
-    };
   };
 
   systemd.services.libvirt-suspend-vms = {
@@ -39,5 +34,7 @@
     "intel_iommu=on" 
     "iommu=pt"
   ];
+
+  boot.kernelModules = [ "nvidia-vgpu-vfio" "vfio_mdev" ];
 
 }
