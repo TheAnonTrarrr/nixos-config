@@ -8,7 +8,7 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" "sr_mod" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod" "sr_mod" ];
   boot.initrd.kernelModules = [ "dm-snapshot" "cryptd" ];
   boot.initrd.luks.devices."crypted" = {
     device = "/dev/disk/by-uuid/9a39e3d0-5513-42eb-91e3-3f589442b4b2";
@@ -28,12 +28,6 @@
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
-  fileSystems."/Windows" =
-    { device = "/dev/disk/by-uuid/D84E24C44E249CEE";
-      fsType = "ntfs3";
-      options = [ "uid=1000" "gid=100" "rw" "umask=000" "nofail" ];
-    };
-
   fileSystems."/Files" =
     { device = "/dev/disk/by-uuid/506AD7406AD72210";
       fsType = "ntfs3";
@@ -44,6 +38,17 @@
     { device = "/dev/disk/by-uuid/8C6688B96688A614";
       fsType = "ntfs3";
       options = [ "uid=1000" "gid=100" "rw" "umask=000" "nofail" ];
+    };
+
+  fileSystems."/mnt/lfs" =
+    { device = "/dev/disk/by-uuid/a213f342-3726-432f-8e48-ed33eafeaa8a";
+      fsType = "ext4";
+    };
+
+  fileSystems."/mnt/lfs/boot/efi" =
+    { device = "/dev/disk/by-uuid/9CB6-420B";
+      fsType = "vfat";
+      options = [ "fmask=0022" "dmask=0022" ];
     };
 
   swapDevices = [ ];
