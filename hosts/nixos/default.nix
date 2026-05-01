@@ -154,11 +154,6 @@
     niri.enable = true;
     virt-manager.enable = true;
 
-    kitty = {
-      enable = true;
-      settings = { paste_actions = "no-op"; };
-    };
-
   };
 
 
@@ -217,6 +212,7 @@
 
   ];
 
+  programs.kitty.settings = { paste_actions = "no-op"; };
 
   # // NixOS Version (DO NOT CHANGE!) //
   system.stateVersion = "25.11";
