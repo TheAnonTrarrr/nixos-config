@@ -44,6 +44,7 @@
                 useGlobalPkgs = true;
                 useUserPackages =  true;
                 users.theanontrarrr = import ./home/theanontrarrr/default.nix;
+                users.lfs = import ./home/lfs/default.nix;
                 backupFileExtension = "backup";
                 extraSpecialArgs = { inherit inputs; };
               };
