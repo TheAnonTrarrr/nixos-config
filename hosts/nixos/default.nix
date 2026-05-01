@@ -126,6 +126,11 @@
 
   };
 
+  users.users.lfs = {
+    isNormalUser = true;
+    home = "/home/lfs";
+    shell = pkgs.bash;
+  };
 
   # // Programs //
   programs = {
