@@ -135,6 +135,8 @@
 
   # // Programs //
   programs = {
+    
+    kitty.enable = true;
 
     firefox.enable = true;
 
@@ -157,11 +159,6 @@
     niri.enable = true;
     virt-manager.enable = true;
 
-    kitty = {
-      enable = true;
-      # settings = {
-      #   paste_actions = "no-op";
-      # };
     };
   };
 
