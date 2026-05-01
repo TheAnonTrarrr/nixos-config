@@ -128,6 +128,7 @@
 
   users.users.lfs = {
     isNormalUser = true;
+    extraGroups = [ "wheel" "lfs" ]
     home = "/home/lfs";
     shell = pkgs.bash;
   };
