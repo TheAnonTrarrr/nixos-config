@@ -34,6 +34,7 @@
     kitty = {
       enable = true;
     };
+    alacritty = { enable = true; };
   };
 
   # // User Packages //
