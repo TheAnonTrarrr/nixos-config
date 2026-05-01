@@ -117,20 +117,17 @@
 
   # // Users //
   users.users.theanontrarrr = {
-
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "video" "input" "libvirtd" "kvm" ];
     packages = with pkgs; [
       tree
     ];
-
   };
 
   users.users.lfs = {
     isNormalUser = true;
     extraGroups = [ "wheel" "lfs" ];
     home = "/home/lfs";
-    shell = pkgs.bash;
   };
 
   # // Programs //
@@ -159,7 +156,6 @@
     niri.enable = true;
     virt-manager.enable = true;
 
-    };
   };
 
 
