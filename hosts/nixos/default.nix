@@ -133,8 +133,6 @@
   # // Programs //
   programs = {
     
-    kitty.enable = true;
-
     firefox.enable = true;
 
     steam = {
@@ -156,10 +154,10 @@
     niri.enable = true;
     virt-manager.enable = true;
 
-    kitty = {
-      enable = true;
-      settings = { paste_actions = "no-op"; };
-    };
+    # kitty = {
+    #   enable = true;
+    #   settings = { paste_actions = "no-op"; };
+    # };
 
   };
 
@@ -181,6 +179,7 @@
     rofi
     obconf
     lxappearance
+    kitty
 
     # // LFS Requirements //
     coreutils
