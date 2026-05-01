@@ -183,6 +183,7 @@
     rofi
     obconf
     lxappearance
+    kitty
 
     # // LFS Requirements //
     coreutils
