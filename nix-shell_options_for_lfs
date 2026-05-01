@@ -1,0 +1,1 @@
+sudo nix-shell -p coreutils bash binutils bison diffutils findutils gawk gcc gpp gnugrep gzip m4 gnumake patch perl python3 gnused gnutar texinfo xz
