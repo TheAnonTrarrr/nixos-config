@@ -159,9 +159,9 @@
 
     kitty = {
       enable = true;
-      settings = {
-        paste_actions = "no-op";
-      };
+      # settings = {
+      #   paste_actions = "no-op";
+      # };
     };
   };
 
@@ -183,7 +183,6 @@
     rofi
     obconf
     lxappearance
-    kitty
 
     # // LFS Requirements //
     coreutils
