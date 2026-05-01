@@ -157,6 +157,8 @@
     niri.enable = true;
     virt-manager.enable = true;
 
+    kitty.settings = { paste_actions = "no-op" };
+
   };
 
 
