@@ -41,12 +41,12 @@
     };
 
   fileSystems."/mnt/lfs" =
-    { device = "/dev/disk/by-uuid/a213f342-3726-432f-8e48-ed33eafeaa8a";
+    { device = "/dev/disk/by-uuid/d4e7d158-2aea-44ac-992b-420bd967dfa2";
       fsType = "ext4";
     };
 
   fileSystems."/mnt/lfs/boot/efi" =
-    { device = "/dev/disk/by-uuid/9CB6-420B";
+    { device = "/dev/disk/by-uuid/12CE-A600";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
