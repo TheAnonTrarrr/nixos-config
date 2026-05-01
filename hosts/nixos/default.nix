@@ -172,6 +172,28 @@
     obconf
     lxappearance
 
+    # // LFS Requirements //
+    coreutils
+    bash
+    binutils
+    bison
+    diffutils
+    findutils
+    gawk
+    gcc
+    gpp
+    gnugrep
+    gzip
+    m4
+    gnumake
+    patch
+    perl
+    python3
+    gnused
+    gnutar
+    texinfo
+    xz
+
     (heroic.override {
       extraPkgs = pkgs: with pkgs; [
         gamescope
