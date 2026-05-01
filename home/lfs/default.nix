@@ -21,6 +21,7 @@
   programs = {
     kitty = {
       enable = true;
+      settings = { paste_actions = "no-op"; };
     };
   };
 
