@@ -31,6 +31,9 @@
       settings.user.name = "TheAnonTrarrr";
       settings.user.email = "208259891+TheAnonTrarrr@users.noreply.github.com";
     };
+    kitty = {
+      enable = true;
+    };
   };
 
   # // User Packages //

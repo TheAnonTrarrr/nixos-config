@@ -174,7 +174,6 @@
     rofi
     obconf
     lxappearance
-    kitty
 
     # // LFS Requirements //
     coreutils
@@ -212,7 +211,6 @@
 
   ];
 
-  programs.kitty.settings = { paste_actions = "no-op"; };
 
   # // NixOS Version (DO NOT CHANGE!) //
   system.stateVersion = "25.11";
