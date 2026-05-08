@@ -176,6 +176,7 @@
     lxappearance
     nasm
     cdrkit
+    bochs
 
     # // LFS Requirements //
     coreutils
