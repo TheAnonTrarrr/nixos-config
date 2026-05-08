@@ -36,6 +36,7 @@
         "Mod+D".action = spawn "fuzzel";
         "Mod+Q".action = close-window;
         "Mod+Shift+E".action = quit;
+        "Mod+Shift+F".action = fullscreen-window;
       
         "Mod+Left".action = focus-column-left;
         "Mod+Right".action = focus-column-right;
