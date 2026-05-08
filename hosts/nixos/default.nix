@@ -177,7 +177,7 @@
     nasm
     cdrkit
     bochs
-    sdl
+    SDL
 
     # // LFS Requirements //
     coreutils
