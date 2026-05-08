@@ -175,6 +175,7 @@
     obconf
     lxappearance
     nasm
+    cdrkit
 
     # // LFS Requirements //
     coreutils
