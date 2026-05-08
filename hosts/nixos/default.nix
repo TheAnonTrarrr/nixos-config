@@ -177,6 +177,7 @@
     nasm
     cdrkit
     bochs
+    sdl
 
     # // LFS Requirements //
     coreutils
@@ -211,10 +212,6 @@
         libkrb5
       ];
     })
-    (bochs.override {
-      sdl2Support = true;
-    })
-
   ];
 
 
