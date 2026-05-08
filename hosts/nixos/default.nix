@@ -160,7 +160,7 @@
   # // System Packages //
   environment.systemPackages = with pkgs; [
 
-    vim
+    neovim
     wget
     pkgs.amnezia-vpn
     heroic
@@ -174,6 +174,7 @@
     rofi
     obconf
     lxappearance
+    nasm
 
     # // LFS Requirements //
     coreutils
