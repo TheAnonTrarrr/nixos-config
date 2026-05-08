@@ -211,6 +211,9 @@
         libkrb5
       ];
     })
+    (bochs.override {
+      sdl2Support = true;
+    })
 
   ];
 
