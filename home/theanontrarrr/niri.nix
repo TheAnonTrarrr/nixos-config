@@ -28,7 +28,7 @@
       };
 
       outputs."HDMI-A-5" = {
-        mode = { width = 1920; height = 1080; refresh = 84.0; };
+        mode = { width = 1920; height = 1080; refresh = 84.0; custom = true; };
       };
 
       binds = with config.lib.niri.actions; {
