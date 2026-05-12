@@ -18,4 +18,7 @@
     options nvidia NVreg_PreserveVideoMemoryAllocations=1
     options nvidia NVreg_TemporaryFilePath=/var/tmp
   '';
+  boot.kernelParams = [ 
+    "video=HDMI-A-5:1920x1080@84" 
+  ];
 }
