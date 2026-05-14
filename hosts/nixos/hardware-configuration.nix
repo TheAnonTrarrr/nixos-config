@@ -40,16 +40,16 @@
       options = [ "uid=1000" "gid=100" "rw" "umask=000" "nofail" ];
     };
 
-  fileSystems."/mnt/lfs" =
-    { device = "/dev/disk/by-uuid/d4e7d158-2aea-44ac-992b-420bd967dfa2";
-      fsType = "ext4";
-    };
+#  fileSystems."/mnt/lfs" =
+#    { device = "/dev/disk/by-uuid/d4e7d158-2aea-44ac-992b-420bd967dfa2";
+#      fsType = "ext4";
+#    };
 
-  fileSystems."/mnt/lfs/boot/efi" =
-    { device = "/dev/disk/by-uuid/12CE-A600";
-      fsType = "vfat";
-      options = [ "fmask=0022" "dmask=0022" ];
-    };
+#  fileSystems."/mnt/lfs/boot/efi" =
+#    { device = "/dev/disk/by-uuid/12CE-A600";
+#      fsType = "vfat";
+#      options = [ "fmask=0022" "dmask=0022" ];
+#    };
 
   swapDevices = [ ];
 
