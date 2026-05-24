@@ -162,7 +162,7 @@
 
     neovim
     wget
-    pkgs.amnezia-vpn
+    amnezia-vpn
     heroic
     gnupg
     mangohud
@@ -178,6 +178,7 @@
     cdrkit
     bochs
     SDL
+    ntfs3g
 
     # // LFS Requirements //
     coreutils
