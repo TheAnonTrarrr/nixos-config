@@ -27,7 +27,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    flake-registry.url = "github:NixOS/flake-registry";
   };
 
   outputs = inputs@{ flake-parts, nixpkgs, home-manager, ... }:
