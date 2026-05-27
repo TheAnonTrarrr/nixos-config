@@ -179,7 +179,7 @@
     bochs
     SDL
     ntfs3g
-    npm
+    nodejs
 
     # // LFS Requirements //
     coreutils
